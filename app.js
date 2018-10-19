@@ -16,6 +16,10 @@ module.exports = app;
 // const opinions = require('./controllers/opinions')(app)
 // const users = require('./controllers/users')(app);
 
+const User = require('./models/user')
+const admin = require('./controllers/admin.js');
+const login = require('./controllers/login.js');
+
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/charity-tracker', {useNewUrlParser: true});
 
